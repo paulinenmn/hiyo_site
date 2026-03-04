@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-poppins",
+});
+
 export const metadata: Metadata = {
-  title: "Nail Art Shop",
-  description: "Boutique de nail art professionnel",
+  title: "Hiyo — Nail Artist",
+  description: "Extension gel, vernis semi-permanent, nail art",
 };
 
 export default function RootLayout({
@@ -13,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body>{children}</body>
+      <body className={`${poppins.variable} font-sans`}>{children}</body>
     </html>
   );
 }

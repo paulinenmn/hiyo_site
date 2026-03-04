@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 200 200">
+	<defs>
+		<line id="oHeure" x1="100" y1="100" x2="100" y2="45" style="stroke-width: 8px; stroke: white;"/>
+		<line id="oMinute" x1="100" y1="100" x2="100" y2="15" style="stroke-width: 8px; stroke: white;"/>
+	</defs>
+
+	<g>
+  <use xlink:href="#oHeure">
+    <animateTransform
+      id="hours"
+      attributeName="transform"
+      type="rotate"
+      dur="1s"
+      begin="indefinite"
+      calcMode="spline"
+      keySplines="0.25 0.1 0.25 1"
+      fill="freeze"
+    />
+  </use>
+</g>
+<g>
+  <use xlink:href="#oMinute">
+    <animateTransform
+      id="minutes"
+      attributeName="transform"
+      type="rotate"
+      dur="1.6s"
+      begin="indefinite"
+      calcMode="spline"
+      keySplines="0.25 0.1 0.25 1"
+      fill="freeze"
+    />
+  </use>
+</g>
+</svg>
